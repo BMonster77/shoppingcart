@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body>
+<div class="container">
+    <h2>购物车</h2>
+
+    <!-- 错误信息显示 -->
+    <div th:if="${errorMessage != null}">
+        <p th:text="${errorMessage}" style="color: red;"></p>
+    </div>
+
+    <!-- 显示购物车内容 -->
+    <div th:if="${shoppingcart != null}">
+        <table>
+            <thead>
+            <tr>
+                <th>商品名称</th>
+                <th>数量</th>
+                <th>价格</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item : ${shoppingcart.shoppingCartProducts}">
+                <td th:text="${item.productName}"></td>
+                <td th:text="${item.quantity}"></td>
+                <td th:text="${item.price}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

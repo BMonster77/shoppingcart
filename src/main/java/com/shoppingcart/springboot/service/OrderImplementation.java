@@ -1,9 +1,10 @@
 package com.shoppingcart.springboot.service;
 
+import com.shoppingcart.springboot.interfacemethods.OrderInterface;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
-public class OrderServiceImpl implements OrderService {
+public class OrderImplementation implements OrderInterface {
 }

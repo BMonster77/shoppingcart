@@ -1,10 +1,14 @@
 package com.shoppingcart.springboot.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
 public class Product {
 
 	@Id
@@ -25,11 +29,14 @@ public class Product {
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<OrderDetail> orderDetails;
 
-	@OneToMany(mappedBy = "product")
-	private List<ShoppingCartProduct> shoppingCartProduct;
+	@OneToMany(mappedBy = "products")
+	private List<ShoppingCartProduct> shoppingCartProducts;
 
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Review> reviews;
+
+	public Product() {
+	}
 
 	// Getters and Setters
 }

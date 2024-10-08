@@ -1,9 +1,14 @@
 package com.shoppingcart.springboot.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
 @Entity
+@Getter
+@Setter
 public class User {
 
 	@Id
@@ -26,6 +31,8 @@ public class User {
 	@OneToOne(mappedBy = "user")
 	private Customer customer;
 
+	public User() {
+	}
 
-	// Getters and Setters
+
 }

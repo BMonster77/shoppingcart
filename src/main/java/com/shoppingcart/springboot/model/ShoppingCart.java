@@ -1,11 +1,15 @@
 package com.shoppingcart.springboot.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Setter
+@Getter
 public class ShoppingCart {
 
 	@Id
@@ -18,6 +22,7 @@ public class ShoppingCart {
 	@OneToMany(mappedBy = "shoppingCart", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ShoppingCartProduct> shoppingCartProducts = new ArrayList<>();
 
-	// Getters and Setters
+	public ShoppingCart() {
+	}
 
 }

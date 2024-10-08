@@ -13,7 +13,7 @@ public class OrderController {
 
 //    删除
  //   @GetMapping("/purchase-history")
-//    public List<PurchaseHistory> hidePurchaseHistory(@RequestParam Long userId) {
+//    public List<PurchaseHistory> browsePurchaseHistory(@RequestParam Long userId) {
 //        return purchaseHistoryService.getPurchaseHistoryByUserId(userId);
 //    }
 }

@@ -1,17 +1,22 @@
 package com.shoppingcart.springboot.controller;
 
-import com.shoppingcart.springboot.service.UserService;
+import com.shoppingcart.springboot.interfacemethods.UserInterface;
+import com.shoppingcart.springboot.model.Customer;
+import com.shoppingcart.springboot.model.Product;
 import com.shoppingcart.springboot.model.User;
+import com.shoppingcart.springboot.service.UserImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    private UserInterface userService;
 
 
 
