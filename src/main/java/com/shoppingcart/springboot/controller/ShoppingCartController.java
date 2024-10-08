@@ -1,18 +1,14 @@
 package com.shoppingcart.springboot.controller;
 
-import com.shoppingcart.springboot.interfacemethods.ShoppingCartInterface;
-import com.shoppingcart.springboot.interfacemethods.UserInterface;
-import com.shoppingcart.springboot.model.User;
+import com.shoppingcart.springboot.service.ShoppingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class ShoppingCartController {
 
     @Autowired
-    private ShoppingCartInterface shoppingCartService;
+    private ShoppingService shoppingCartService;
 
 
 //    // 获取用户购物车的内容

@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4102ee5-d4b6-4097-860a-73e7035c572b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/OrderInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/ProductInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/ReviewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/ShoppingCartInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/OrderImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ReviewImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/UserImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/ShoppingCartApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/ShoppingCartApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +53,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Admin",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ShoppingCartApplication.executor": "Run",
+    "git-widget-placeholder": "ben",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/benben/workspace/shoppingcart",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MTFeaturesSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
@@ -79,6 +102,7 @@
       <workItem from="1728356234440" duration="6000" />
       <workItem from="1728359547688" duration="149000" />
       <workItem from="1728359798413" duration="12000" />
+      <workItem from="1728363554941" duration="884000" />
     </task>
     <servers />
   </component>

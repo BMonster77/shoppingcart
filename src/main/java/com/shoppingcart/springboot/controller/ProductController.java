@@ -1,26 +1,14 @@
 package com.shoppingcart.springboot.controller;
 
-import com.shoppingcart.springboot.interfacemethods.ProductInterface;
-import com.shoppingcart.springboot.model.Product;
-import com.shoppingcart.springboot.service.ProductImplementation;
-import jakarta.validation.Valid;
+import com.shoppingcart.springboot.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.List;
 
 @Controller
 public class ProductController {
 
     @Autowired
-    private ProductInterface productService;
+    private ProductService productService;
 
 //    @RequestMapping("/product/getProductsByPage")
 //    public List<Product> browseAllProducts(

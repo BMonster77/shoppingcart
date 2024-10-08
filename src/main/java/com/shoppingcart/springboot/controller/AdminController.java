@@ -6,7 +6,11 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class AdminController {
 
-// HELLLO
+    @Autowired
+    private ProductService productService;
+
+    @Autowired
+    private OrderService orderService;
 
 //    // Add Product - 添加产品
 //    @PostMapping("/admin/product/add")
