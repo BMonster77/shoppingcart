@@ -29,7 +29,7 @@ public class Product {
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<OrderDetail> orderDetails;
 
-	@OneToMany(mappedBy = "products")
+	@OneToMany(mappedBy = "product")
 	private List<ShoppingCartProduct> shoppingCartProducts;
 
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
