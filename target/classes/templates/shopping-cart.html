@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Test</title>
+</head>
+<body>
+<h1>Shopping Cart Test Interface</h1>
+
+<!-- 查看购物车 -->
+<h2>View Shopping Cart</h2>
+<input type="number" id="viewCustomerId" placeholder="Enter Customer ID" />
+<button onclick="viewCart()">View Cart</button>
+<pre id="viewCartResult"></pre>
+
+<!-- 添加商品到购物车 -->
+<h2>Add Product to Cart</h2>
+<input type="number" id="addCustomerId" placeholder="Enter Customer ID" />
+<input type="number" id="addProductId" placeholder="Enter Product ID" />
+<input type="number" id="addQuantity" placeholder="Enter Quantity" />
+<button onclick="addProductToCart()">Add Product</button>
+<pre id="addProductResult"></pre>
+
+<!-- 移除商品从购物车 -->
+<h2>Remove Product from Cart</h2>
+<input type="number" id="removeCustomerId" placeholder="Enter Customer ID" />
+<input type="number" id="removeProductId" placeholder="Enter Product ID" />
+<button onclick="removeProductFromCart()">Remove Product</button>
+<pre id="removeProductResult"></pre>
+
+<!-- 创建订单 -->
+<h2>Create Order</h2>
+<input type="number" id="orderCustomerId" placeholder="Enter Customer ID" />
+<button onclick="createOrder()">Create Order</button>
+<pre id="createOrderResult"></pre>
+
+<!-- 完成订单支付 -->
+<h2>Complete Payment</h2>
+<input type="number" id="paymentOrderId" placeholder="Enter Order ID" />
+<button onclick="completePayment()">Complete Payment</button>
+<pre id="completePaymentResult"></pre>
+
+<script>
+    // 查看购物车
+    function viewCart() {
+        const customerId = document.getElementById('viewCustomerId').value;
+        fetch(`/api/view-cart?customerId=${customerId}`)
+            .then(response => response.json())
+            .then(data => document.getElementById('viewCartResult').innerText = JSON.stringify(data, null, 2))
+            .catch(error => console.error('Error:', error));
+    }
+
+    // 添加商品到购物车
+    function addProductToCart() {
+        const customerId = document.getElementById('addCustomerId').value;
+        const productId = document.getElementById('addProductId').value;
+        const quantity = document.getElementById('addQuantity').value;
+        fetch(`/api/add-product?customerId=${customerId}&productId=${productId}&quantity=${quantity}`, { method: 'POST' })
+            .then(response => response.json())
+            .then(data => document.getElementById('addProductResult').innerText = JSON.stringify(data, null, 2))
+            .catch(error => console.error('Error:', error));
+    }
+
+    // 移除商品从购物车
+    function removeProductFromCart() {
+        const customerId = document.getElementById('removeCustomerId').value;
+        const productId = document.getElementById('removeProductId').value;
+        fetch(`/api/remove-product?customerId=${customerId}&productId=${productId}`, { method: 'POST' })
+            .then(response => response.json())
+            .then(data => document.getElementById('removeProductResult').innerText = JSON.stringify(data, null, 2))
+            .catch(error => console.error('Error:', error));
+    }
+
+    // 创建订单
+    function createOrder() {
+        const customerId = document.getElementById('orderCustomerId').value;
+        fetch(`/api/create-order?customerId=${customerId}`, { method: 'POST' })
+            .then(response => response.json())
+            .then(data => document.getElementById('createOrderResult').innerText = JSON.stringify(data, null, 2))
+            .catch(error => console.error('Error:', error));
+    }
+
+    // 完成订单支付
+    function completePayment() {
+        const orderId = document.getElementById('paymentOrderId').value;
+        fetch(`/api/complete-payment?orderId=${orderId}`, { method: 'POST' })
+            .then(response => response.text())
+            .then(data => document.getElementById('completePaymentResult').innerText = data)
+            .catch(error => console.error('Error:', error));
+    }
+</script>
+</body>
+</html>
+
+
