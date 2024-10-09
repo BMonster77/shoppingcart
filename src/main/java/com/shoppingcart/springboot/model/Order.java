@@ -1,6 +1,7 @@
 package com.shoppingcart.springboot.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,6 +26,7 @@ public class Order {
 	private Customer customer;
 
 	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+	@JsonManagedReference
 	private List<OrderDetail> orderDetails = new ArrayList<>();
 
 	private double finalPrice;
