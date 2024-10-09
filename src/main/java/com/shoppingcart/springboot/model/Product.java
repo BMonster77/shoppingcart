@@ -1,10 +1,15 @@
 package com.shoppingcart.springboot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
+@Setter
+@Getter
 public class Product {
 
 	@Id
@@ -26,6 +31,7 @@ public class Product {
 	private List<OrderDetail> orderDetails;
 
 	@OneToMany(mappedBy = "product")
+	@JsonIgnore
 	private List<ShoppingCartProduct> shoppingCartProduct;
 
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)

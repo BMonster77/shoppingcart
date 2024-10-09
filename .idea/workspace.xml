@@ -4,31 +4,80 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4102ee5-d4b6-4097-860a-73e7035c572b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="b4102ee5-d4b6-4097-860a-73e7035c572b" name="Changes" comment="push shoppingcart next time">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/OrderDetailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/ShoppingCartProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/ShoppingCartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shopping-cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/shoppingcart/springboot/demo/ShoppingCartControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/OrderInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/ProductInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/ReviewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/ShoppingCartInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/interfacemethods/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/OrderImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ReviewImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/UserImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/OrderVoucher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/OrderVoucher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/ShoppingCartProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/ShoppingCartProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Voucher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Voucher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/shoppingcart/springboot/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/ShoppingCartApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/ShoppingCartApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ShoppingCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ShoppingCartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/OrderDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/OrderDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/OrderVoucher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/OrderVoucher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/ShoppingCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/ShoppingCartProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/ShoppingCartProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Voucher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Voucher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ReviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ReviewServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ShoppingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ShoppingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="hzy" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -39,14 +88,17 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:BMonster77/shoppingcart.git&quot;,
-    &quot;accountId&quot;: &quot;0a40c93e-a627-43f9-b330-3f2b76c42573&quot;
+    &quot;url&quot;: &quot;https://github.com/BMonster77/shoppingcart.git&quot;,
+    &quot;accountId&quot;: &quot;842cf8b3-b48d-4140-8260-b2ed60ee7942&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2mxPcq27pjfBz6DyBO85FzOUI7y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,9 +112,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ShoppingCartApplication.executor": "Run",
-    "git-widget-placeholder": "ben",
+    "git-widget-placeholder": "hzy1",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/benben/workspace/shoppingcart",
+    "last_opened_file_path": "/Users/huangzeyuan/Desktop/CA/shoppingcart",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,12 +132,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShoppingCartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="shopping-cart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.shoppingcart.springboot.ShoppingCartApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18968.26" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18968.26" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
       </set>
     </attachedChunks>
   </component>
@@ -103,10 +162,26 @@
       <workItem from="1728359547688" duration="149000" />
       <workItem from="1728359798413" duration="12000" />
       <workItem from="1728363554941" duration="884000" />
+      <workItem from="1728376615022" duration="3335000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="push shoppingcart next time" />
+    <option name="LAST_COMMIT_MESSAGE" value="push shoppingcart next time" />
   </component>
 </project>
