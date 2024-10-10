@@ -81,7 +81,7 @@ public class ShoppingCartController {
 
     /**
      * 从购物车中移除指定数量商品的接口
-     * 完整路径：POST http://localhost:8080/api/remove-product?customerId=1&productId=2&quantity=1
+     * 完整路径：POST http://localhost:8080/api/remove-product?customerId=1&productId=2&quantity=3
      *
      * @param customerId 客户ID
      * @param productId  商品ID
@@ -98,12 +98,13 @@ public class ShoppingCartController {
             Product product = productRepository.findById(productId)
                     .orElseThrow(() -> new RuntimeException("Product not found"));
 
-            ShoppingCart shoppingCart = shoppingService.removeProductFromCart(customer, product);
+            ShoppingCart shoppingCart = shoppingService.removeProductFromCart(customer, product, quantity);
             return ResponseEntity.ok(shoppingCart);
         } catch (RuntimeException ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
+
 
     // ========================= 订单相关接口 =========================
 
@@ -130,7 +131,7 @@ public class ShoppingCartController {
      * 完成订单支付的接口，支持使用代金券
      * 完整路径：POST http://localhost:8080/api/complete-payment?orderId=1&voucherCode=DISCOUNT2024
      *
-     * @param orderId    订单ID
+     * @param orderId     订单ID
      * @param voucherCode 代金券代码（可选）
      * @return 支付完成状态或错误信息
      */
@@ -145,6 +146,11 @@ public class ShoppingCartController {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Order has already been paid.");
             }
 
+            // 在完成支付之前应用优惠券
+            if (voucherCode != null && !voucherCode.isEmpty()) {
+                shoppingService.applyVoucherToOrder(order, voucherCode);
+            }
+
             shoppingService.completePayment(order, voucherCode);
             return ResponseEntity.ok("Order payment completed successfully.");
         } catch (RuntimeException ex) {
@@ -154,6 +160,7 @@ public class ShoppingCartController {
         }
     }
 }
+
 
 
 

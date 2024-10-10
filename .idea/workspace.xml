@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4102ee5-d4b6-4097-860a-73e7035c572b" name="Changes" comment="push shoppingcart next time">
+    <list default="true" id="b4102ee5-d4b6-4097-860a-73e7035c572b" name="Changes" comment="Merge remote-tracking branch 'origin/hzy1' into hzy1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java&#10;#&#9;src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java&#10;#&#9;target/classes/com/shoppingcart/springboot/controller/ShoppingCartController.class&#10;#&#9;target/classes/com/shoppingcart/springboot/model/OrderDetail.class&#10;#&#9;target/classes/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ShoppingCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ShoppingCartController.class" afterDir="false" />
@@ -134,7 +135,7 @@
       <workItem from="1728363554941" duration="884000" />
       <workItem from="1728376615022" duration="3335000" />
       <workItem from="1728520424997" duration="1605000" />
-      <workItem from="1728524441067" duration="398000" />
+      <workItem from="1728524441067" duration="3420000" />
     </task>
     <task id="LOCAL-00001" summary="push shoppingcart next time">
       <option name="closed" value="true" />
@@ -160,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728489088820</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/hzy1' into hzy1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java&#10;#&#9;src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java&#10;#&#9;target/classes/com/shoppingcart/springboot/controller/ShoppingCartController.class&#10;#&#9;target/classes/com/shoppingcart/springboot/model/OrderDetail.class&#10;#&#9;target/classes/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.class">
+      <option name="closed" value="true" />
+      <created>1728524892438</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728524892438</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +188,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="push shoppingcart next time" />
-    <option name="LAST_COMMIT_MESSAGE" value="push shoppingcart next time" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/hzy1' into hzy1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java&#10;#&#9;src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java&#10;#&#9;target/classes/com/shoppingcart/springboot/controller/ShoppingCartController.class&#10;#&#9;target/classes/com/shoppingcart/springboot/model/OrderDetail.class&#10;#&#9;target/classes/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/hzy1' into hzy1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java&#10;#&#9;src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java&#10;#&#9;target/classes/com/shoppingcart/springboot/controller/ShoppingCartController.class&#10;#&#9;target/classes/com/shoppingcart/springboot/model/OrderDetail.class&#10;#&#9;target/classes/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -188,6 +198,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

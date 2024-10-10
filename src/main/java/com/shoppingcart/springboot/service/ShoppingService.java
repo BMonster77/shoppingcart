@@ -15,7 +15,8 @@ public interface ShoppingService {
     ShoppingCart addProductToCart(Customer customer, Product product, int quantity);
 
     // 从购物车中移除商品
-    ShoppingCart removeProductFromCart(Customer customer, Product product);
+    ShoppingCart removeProductFromCart(Customer customer, Product product, int quantity);
+
 
     // 创建一个新的订单
     Order createOrderFromCart(Customer customer);

@@ -70,11 +70,24 @@ public class ShoppingCartServiceImpl implements ShoppingService {
     }
 
     @Override
-    public ShoppingCart removeProductFromCart(Customer customer, Product product) {
+    public ShoppingCart removeProductFromCart(Customer customer, Product product, int quantity) {
         ShoppingCart shoppingCart = getShoppingCartByCustomer(customer);
-        shoppingCart.getShoppingCartProducts().removeIf(cartProduct -> cartProduct.getProduct().equals(product));
+
+        shoppingCart.getShoppingCartProducts().forEach(cartProduct -> {
+            if (cartProduct.getProduct().equals(product)) {
+                int updatedQuantity = cartProduct.getQuantity() - quantity;
+                if (updatedQuantity > 0) {
+                    cartProduct.setQuantity(updatedQuantity);
+                } else {
+                    // 如果更新后的数量小于或等于零，则移除该商品
+                    shoppingCart.getShoppingCartProducts().remove(cartProduct);
+                }
+            }
+        });
+
         return shoppingCartRepository.save(shoppingCart);
     }
+
 
     // ========================= 订单操作相关方法 =========================
 
