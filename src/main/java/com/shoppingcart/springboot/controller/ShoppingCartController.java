@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import com.shoppingcart.springboot.repository.CustomerRepository;
 
-import java.util.Optional;
 
 
 @RestController // 标注这个类为一个 RESTful 控制器，用于接收并处理 HTTP 请求
@@ -40,11 +39,14 @@ public class ShoppingCartController {
      */
     @GetMapping("/view-cart")
     public ResponseEntity<ShoppingCart> viewShoppingCart(@RequestParam Long customerId) {
-        // 查找客户并返回其购物车信息
-        Customer customer = customerRepository.findById(customerId)
-                .orElseThrow(() -> new RuntimeException("Customer not found"));
-        ShoppingCart shoppingCart = customer.getShoppingCart();
-        return ResponseEntity.ok(shoppingCart);
+        try {
+            Customer customer = customerRepository.findById(customerId)
+                    .orElseThrow(() -> new RuntimeException("Customer not found"));
+            ShoppingCart shoppingCart = shoppingService.getShoppingCartByCustomer(customer);
+            return ResponseEntity.ok(shoppingCart);
+        } catch (RuntimeException ex) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
     }
 
     /**
@@ -61,21 +63,18 @@ public class ShoppingCartController {
                                                          @RequestParam Long productId,
                                                          @RequestParam int quantity) {
         try {
-            // 查找客户和产品信息
             Customer customer = customerRepository.findById(customerId)
                     .orElseThrow(() -> new RuntimeException("Customer not found"));
             Product product = productRepository.findById(productId)
                     .orElseThrow(() -> new RuntimeException("Product not found"));
 
-            // 检查库存是否充足
             if (product.getStoreQuantity() < quantity) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
             }
 
-            // 添加商品到购物车并返回更新后的购物车信息
             ShoppingCart shoppingCart = shoppingService.addProductToCart(customer, product, quantity);
             return ResponseEntity.ok(shoppingCart);
-        } catch (Exception ex) {
+        } catch (RuntimeException ex) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
@@ -94,33 +93,13 @@ public class ShoppingCartController {
                                                               @RequestParam Long productId,
                                                               @RequestParam int quantity) {
         try {
-            // 查找客户和产品信息
             Customer customer = customerRepository.findById(customerId)
                     .orElseThrow(() -> new RuntimeException("Customer not found"));
             Product product = productRepository.findById(productId)
                     .orElseThrow(() -> new RuntimeException("Product not found"));
 
-            // 从购物车中移除指定数量的商品
-            ShoppingCart shoppingCart = shoppingService.getShoppingCartByCustomer(customer);
-            Optional<ShoppingCartProduct> cartProductOpt = shoppingCart.getShoppingCartProducts().stream()
-                    .filter(cartProduct -> cartProduct.getProduct().equals(product))
-                    .findFirst();
-
-            if (cartProductOpt.isPresent()) {
-                ShoppingCartProduct cartProduct = cartProductOpt.get();
-                int updatedQuantity = cartProduct.getQuantity() - quantity;
-
-                if (updatedQuantity > 0) {
-                    cartProduct.setQuantity(updatedQuantity); // 更新商品数量
-                } else {
-                    shoppingCart.getShoppingCartProducts().remove(cartProduct); // 移除商品
-                }
-
-                shoppingService.saveShoppingCart(shoppingCart); // 保存购物车状态
-                return ResponseEntity.ok(shoppingCart);
-            } else {
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // 购物车中未找到商品
-            }
+            ShoppingCart shoppingCart = shoppingService.removeProductFromCart(customer, product);
+            return ResponseEntity.ok(shoppingCart);
         } catch (RuntimeException ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
@@ -138,7 +117,6 @@ public class ShoppingCartController {
     @RequestMapping(value = "/create-order", method = {RequestMethod.POST, RequestMethod.GET})
     public ResponseEntity<Order> createOrder(@RequestParam Long customerId) {
         try {
-            // 查找客户并根据购物车创建订单
             Customer customer = customerRepository.findById(customerId)
                     .orElseThrow(() -> new RuntimeException("Customer not found"));
             Order order = shoppingService.createOrderFromCart(customer);
@@ -160,17 +138,13 @@ public class ShoppingCartController {
     public ResponseEntity<String> completePayment(@RequestParam Long orderId,
                                                   @RequestParam(required = false) String voucherCode) {
         try {
-            // 查找订单
             Order order = shoppingService.findOrderById(orderId)
                     .orElseThrow(() -> new RuntimeException("Order not found"));
 
-            // 检查订单是否已经支付
             if ("PAID".equalsIgnoreCase(order.getStatus())) {
-                // 如果订单已经支付，则返回一个错误响应
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Order has already been paid.");
             }
 
-            // 完成订单支付
             shoppingService.completePayment(order, voucherCode);
             return ResponseEntity.ok("Order payment completed successfully.");
         } catch (RuntimeException ex) {
@@ -180,6 +154,8 @@ public class ShoppingCartController {
         }
     }
 }
+
+
 
 
 
