@@ -24,16 +24,20 @@ const ProductList = ({ products, onSelectProduct, onDeleteProduct, onStockSelect
   };
 
   return (
-    <ul>
+    <ul className="list-group mb-3">
       {products.map((product) => (
-        <li key={product.productId}>
-          {product.name} ({product.category}) - ${product.price.toFixed(2)}  {/* Format price */}
-          <button onClick={() => onSelectProduct(product)}>Edit</button>
-          <button onClick={() => onStockSelect(product)}>Update Stock</button>
-          <button onClick={() => handleToggleVisibility(product)}>
-            {product.visible ? "Hide" : "Show"}
-          </button>
-          <button onClick={() => handleDelete(product.productId)}>Delete</button>
+        <li key={product.productId} className="list-group-item d-flex justify-content-between align-items-center">
+          <div>
+            <strong>{product.name}</strong> ({product.category}) - ${product.price.toFixed(2)}
+          </div>
+          <div>
+            <button className="btn btn-outline-info btn-sm mr-2" onClick={() => onSelectProduct(product)}>Edit</button>
+            <button className="btn btn-outline-success btn-sm mr-2" onClick={() => onStockSelect(product)}>Stock</button>
+            <button className="btn btn-outline-warning btn-sm mr-2" onClick={() => handleToggleVisibility(product)}>
+              {product.visible ? "Hide" : "Show"}
+            </button>
+            <button className="btn btn-outline-danger btn-sm" onClick={() => handleDelete(product.productId)}>Delete</button>
+          </div>
         </li>
       ))}
     </ul>

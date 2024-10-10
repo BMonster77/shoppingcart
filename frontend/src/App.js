@@ -51,18 +51,36 @@ const App = () => {
 
   return (
     <div>
-      <h1>Admin Panel</h1>
-      <AddProductForm onProductAdded={handleProductAdded} />  {/* Add Product Form */}
-      <ProductSearch setProducts={setProducts} />
-      <ProductList
-        products={products}
-        onSelectProduct={handleProductSelect}
-        onDeleteProduct={handleDeleteProduct}
-        onStockSelect={handleStockSelect}
-        onVisibilityToggle={handleVisibilityToggle}
-      />
-      {selectedProduct && <ProductForm selectedProduct={selectedProduct} onSave={handleSave} />}
-      {stockProduct && <StockForm product={stockProduct} onStockUpdate={handleStockUpdate} />}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <a className="navbar-brand" href="/">Admin Panel</a>
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="/">Home</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8">
+            <ProductSearch setProducts={setProducts} />
+            <ProductList
+              products={products}
+              onSelectProduct={handleProductSelect}
+              onDeleteProduct={handleDeleteProduct}
+              onStockSelect={handleStockSelect}
+              onVisibilityToggle={handleVisibilityToggle}
+            />
+          </div>
+          <div className="col-md-4">
+            {selectedProduct && <ProductForm selectedProduct={selectedProduct} onSave={handleSave} />}
+            {stockProduct && <StockForm product={stockProduct} onStockUpdate={handleStockUpdate} />}
+            <AddProductForm onProductAdded={handleProductAdded} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
