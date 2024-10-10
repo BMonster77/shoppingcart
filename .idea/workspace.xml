@@ -5,23 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4102ee5-d4b6-4097-860a-73e7035c572b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/ShoppingCartApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ProductController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/ShoppingCartController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/interfacemethods/OrderInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/interfacemethods/ProductInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/interfacemethods/ReviewInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/interfacemethods/ShoppingCartInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/interfacemethods/UserInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/OrderImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ProductImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ReviewImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/ShoppingCartImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/service/UserImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/controller/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingcart/springboot/service/ShoppingCartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/shoppingcart/springboot/repository/ProductRepository.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,22 +32,22 @@
     &quot;assignee&quot;: &quot;BuuBuBuu&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:BMonster77/shoppingcart.git",
-    "accountId": "0a40c93e-a627-43f9-b330-3f2b76c42573"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:BMonster77/shoppingcart.git&quot;,
+    &quot;accountId&quot;: &quot;0a40c93e-a627-43f9-b330-3f2b76c42573&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "BMonster77",
-    "repository": "shoppingcart"
+    &quot;owner&quot;: &quot;BMonster77&quot;,
+    &quot;repository&quot;: &quot;shoppingcart&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -61,27 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ShoppingCartApplication.executor": "Run",
-    "git-widget-placeholder": "#5 on ben",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/benben/workspace/shoppingcart",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MTFeaturesSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ShoppingCartApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ben&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/benben/workspace/shoppingcart&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ShoppingCartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shopping-cart" />
@@ -114,11 +109,24 @@
       <workItem from="1728359798413" duration="12000" />
       <workItem from="1728363554941" duration="884000" />
       <workItem from="1728364594744" duration="23000" />
-      <workItem from="1728364622600" duration="562000" />
+      <workItem from="1728364622600" duration="2468000" />
+      <workItem from="1728371638230" duration="6385000" />
+      <workItem from="1728379741848" duration="4154000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
