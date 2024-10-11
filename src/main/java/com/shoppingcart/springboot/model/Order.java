@@ -30,6 +30,9 @@ public class Order {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date orderDate;
 
+	public void setStatus(String status) {
+	}
+
 
 	// Getters and Setters
 }
